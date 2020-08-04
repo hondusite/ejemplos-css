@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Ejemplo css</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+      <style>
+        *{
+          margin:0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+       h1{
+         text-align: center;
+       }
+       div{
+         width: 500px;
+         margin:auto;
+         padding:10px 20px;
+         background-color: #ccc;
+       }
+       input, select, textarea{
+         width: 100%;
+       }
+      input[type=text] , input[type=email] , select , textarea{
+        padding: 12px 10px;
+        margin: 8px 0;
+        border-radius: 10px;
+        
+      }
+      input[type=text]:focus, input[type=email]:focus{
+         outline: none;
+      }
+      input[type=text]{
+        background-color: white; background-image: url('searchicon.png'); background-position: 10px 10px; background-repeat: no-repeat; padding-left: 40px;
+      }
+      input[type=submit]{
+        background-color: #4CAF50; 
+        border: none;
+        color: white;
+        padding: 16px 32px; 
+        text-decoration: none;
+        margin: 4px 2px; 
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      input[type=submit]:hover{
+        background-color: #88cc8a;
+      }
+      ::placeholder{
+        color:rgb(13, 102, 13);
+      }
+      input:focus:invalid{
+        background: #fff url(error.png) no-repeat 98% center;
+box-shadow: 0 0 5px #d45252;
+border-color: #b03535
+
+      }
+      input:focus:valid{
+        background: #fff url(correcto.png) no-repeat 98% center;
+box-shadow: 0 0 5px #5cd053;
+border-color: #28921f;
+      }
+      </style>
+      </head>
+<body>
+<h1>Formularios</h1>
+<div>
+  <form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" placeholder="Jhon Wick" required>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="email@sitio.com" required>
+    <label for="pais">Pais</label>
+    <select name="pais" id="pais">
+      <option value="Honduras">Honduras</option>
+      <option value="Honduras">Guatemala</option>
+      <option value="Honduras">El Salvador</option>
+    </select>
+    <label for="mensaje">Mensaje</label>
+    <textarea name="mensaje" id="mensaje"></textarea>
+    <input type="submit" value="Enviar">
+  </form>
+</div>
+</body>
+</html>
