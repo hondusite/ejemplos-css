@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Ejemplo css</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+      <style>
+        
+       h1{
+         text-align: center;
+         font-size: 2.5em;
+         
+       }
+       .nav{
+         display:flex;
+         flex-direction: row;
+         background-color:#ccc;
+        
+       }
+       .logo{
+          height: 80px;
+          background-color:lightblue;
+          flex-grow: 1;
+          margin:10px;
+       }
+       .menu{
+        height: 80px;
+        background-color:navy;
+        flex-grow: 2;
+        margin:10px;
+       }
+       .container{
+         display: flex;
+         flex-direction: row;
+       }
+       .col{
+         height: 100px;
+         flex-grow: 1;
+         justify-content: space-around;
+         background-color:lightsalmon;
+         margin:10px;
+       }
+       @media all and (max-width:768px){
+         .container{
+            flex-direction: column;
+         }
+       }
+       @media all and (max-width: 480px){
+         .nav{
+           flex-direction: column;
+         }
+         .logo{
+           flex-grow: 1;
+         }
+         .menu{
+           flex-grow: 1;
+         }
+       }
+      </style>
+      </head>
+<body>
+<h1>Responsive Web Design y Flexbox</h1>
+<div class="nav">
+  <div class="logo"></div>
+  <div class="menu"></div>
+</div>
+<div class="container">
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+</div>
+</body>
+</html>
